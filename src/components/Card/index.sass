@@ -1,0 +1,56 @@
+@import ../../assets/styles/_misc
+@import ../../assets/styles/_colors
+@import ../../assets/styles/_font
+  
+.card
+  position: absolute
+  width: 260px
+  padding: 12px
+  overflow: hidden
+  text-align: center
+  background: $color-white
+  box-shadow: $shadow-main
+  border-radius: $border-radius-main
+
+  .editbar
+    position: absolute
+    left: 30%
+    right: 30%
+    top: -15%
+    transition: top 0.3s ease
+    padding: 6px
+    user-select: none
+    background: rgba(196, 196, 196, 0.6)
+    border-radius: 0px 0px $border-radius-main $border-radius-main
+    box-shadow: $shadow-light
+    justify-content: space-around
+    display: flex
+
+    .icon
+      cursor: pointer
+      transition: transform 0.3s cubic-bezier(0,1,0.5,2)
+      &:hover, &:active
+        transform: scale(1.3)
+
+  &:hover, &:active
+    .editbar
+      top: 0
+
+  .imageWrapper
+    overflow: hidden
+    background-size: cover
+    background-position: center center
+
+    img
+      width: 100%
+      border-radius: $border-radius-nested
+
+  .label 
+    margin: 20px 0
+    color: #000000
+
+  .date
+    text-align: right
+    margin: 0
+    font: $font-small-label
+
