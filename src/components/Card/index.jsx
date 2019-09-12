@@ -11,11 +11,11 @@ class Card extends React.Component {
     super(props);
 
     this.state = {
-      rotation: 0,
-      position: [
+      position: props.position || [
         Math.random() * (window.innerWidth / 2),
         Math.random() * (window.innerHeight / 2),
       ],
+      rotation: props.rotation,
     };
 
     this.rotationHandler = handlers.initRotationHandler(this);
@@ -67,11 +67,18 @@ Card.propTypes = {
     PropTypes.instanceOf(Date),
     PropTypes.instanceOf(null),
   ]),
+  position: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.number),
+    PropTypes.instanceOf(null),
+  ]),
+  rotation: PropTypes.number,
 };
 
 Card.defaultProps = {
   text: '',
   date: null,
+  position: null,
+  rotation: 0,
 };
 
 

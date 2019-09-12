@@ -1,0 +1,31 @@
+@import '../../assets/styles/_colors' 
+@import '../../assets/styles/_misc'
+  
+.fab
+  background: $color-neutral
+  box-shadow: $shadow-button
+  user-select: none
+  position: fixed
+  border-radius: 50px
+  text-align: center
+
+  .icon
+    cursor: pointer
+    font-size: 3em
+
+  &:hover 
+    .fab-content:not(:empty)
+      border-top: 2px solid $color-white
+      max-height: 500px
+
+  .fab-content
+    overflow: hidden
+    max-height: 0
+    margin-top: -5px
+    border-top: 2px solid transparent
+    transition: all 0.5s ease-in-out
+
+    .icon
+      display: block
+      font-size: 2em
+      margin: 0.5em 0 0.6em

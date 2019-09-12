@@ -9,7 +9,6 @@ function initRotationHandler(scope) {
 
   function move(event) {
     const angle = calcAngle(event.pageX, event.pageY);
-    // scope.setState((state) => ({ rotation: state + (rotation + delta * speed) }));
     scope.setState({ rotation: angle });
   }
 

@@ -1,0 +1,23 @@
+{
+  "boards": [
+    {
+      "name": "My Test Board",
+      "cards": [
+        {
+          "img": "../../assets/demo/fam1.jpg",
+          "date": "2018-10-1",
+          "text": "My Autumn Family Photo!",
+          "position": [50, 100],
+          "rotation": 0.754
+        },
+        {
+          "img": "../../assets/demo/fam2.jpg",
+          "date": "2018-06-03",
+          "text": "Little Ann with parents",
+          "position": [300, 500],
+          "rotation": -0.34
+        }
+      ]
+    }
+  ]
+}
