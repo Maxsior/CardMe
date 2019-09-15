@@ -1,17 +1,18 @@
-@import '../../assets/styles/_colors' 
-@import '../../assets/styles/_misc'
+@import ../../assets/styles/_colors
+@import ../../assets/styles/_misc
   
 .fab
   background: $color-neutral
   box-shadow: $shadow-button
   user-select: none
   position: fixed
-  border-radius: 50px
+  border-radius: 150px
   text-align: center
+  display: inline-block
 
   .icon
     cursor: pointer
-    font-size: 3em
+    font-size: 2.5em
 
   &:hover 
     .fab-content:not(:empty)
@@ -27,5 +28,5 @@
 
     .icon
       display: block
-      font-size: 2em
+      font-size: 1.5em
       margin: 0.5em 0 0.6em

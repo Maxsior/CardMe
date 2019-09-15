@@ -1,6 +1,9 @@
 const path = require('path');
 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 const NODE_ENV = process.env.NODE_ENV || 'development';
+
 
 module.exports = {
   mode: NODE_ENV,
@@ -9,7 +12,7 @@ module.exports = {
   },
   output: {
     publicPath: '/',
-    path: path.resolve(__dirname, '/dist'),
+    path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -39,4 +42,10 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'CardMe',
+      template: 'index.html',
+    }),
+  ],
 };

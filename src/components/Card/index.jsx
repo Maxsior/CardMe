@@ -23,7 +23,9 @@ class Card extends React.Component {
   }
 
   render() {
-    const { img, date, text } = this.props;
+    const {
+      img, date, text, onEdit,
+    } = this.props;
     const { rotation, position } = this.state;
     return (
       <div
@@ -44,7 +46,10 @@ class Card extends React.Component {
           { text }
         </p>
         <div className="editbar">
-          <Icon name="edit" />
+          <Icon
+            name="edit"
+            onClick={onEdit}
+          />
           <Icon
             name="autorenew"
             onMouseDown={this.rotationHandler}
@@ -72,6 +77,7 @@ Card.propTypes = {
     PropTypes.instanceOf(null),
   ]),
   rotation: PropTypes.number,
+  onEdit: PropTypes.func.isRequired,
 };
 
 Card.defaultProps = {

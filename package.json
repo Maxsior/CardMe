@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server",
-    "build": "webpack --production",
+    "build": "set NODE_ENV=production&& webpack --progress --colors",
     "test": "mocha"
   },
   "repository": {
@@ -35,6 +35,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
     "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.7",
@@ -42,6 +43,7 @@
   },
   "dependencies": {
     "eslint-plugin-react-hooks": "1.7.0",
+    "moment": "^2.24.0",
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",

@@ -1,0 +1,54 @@
+@import ../../assets/styles/_colors
+@import ../../assets/styles/_misc
+
+.modal
+  background-color: $color-shutter
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 100
+  display: none
+
+  &.open
+    display: block
+
+  .imageWrapper
+    min-height: 40%
+    max-height: 85%
+
+    img:not([src])
+      color: red
+
+  .contents
+    box-sizing: border-box
+    width: 66vw
+    height: 92vh 
+    margin: 4vh 17vw
+
+    [contenteditable]
+      &:focus
+        border: 1px dashed $color-dark
+      &.invalid
+        color: red
+
+  .buttons
+    position: fixed
+    right: 0
+    bottom: 0
+    width: 17vw
+    min-width: 100px
+    text-align: center
+
+    .fab
+      position: relative
+      margin-bottom: 4vh
+
+    .close
+      color: $color-negative
+      font-size: 1.25em
+
+    .ok
+      color: $color-positive
+      font-size: 2em

@@ -10,7 +10,12 @@ function Copyright() {
         <img src={icon} alt="[]" />
         CardMe
       </p>
-      <p>&copy; Maxim Kudryavtsev, 2019</p>
+      <p>
+        &copy;&nbsp;
+        <a href="mailto: maxsior@mail.ru">Maxim Kudryavtsev</a>
+        , 2019
+      </p>
+      <p>for Xsolla Summer School 2019</p>
     </div>
   );
 }
