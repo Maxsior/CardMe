@@ -53,7 +53,7 @@ class Workflow extends React.Component {
           card.date.toISOString().substr(0, 10) === date
           && card.text === label
           && image.indexOf(card.image) > -1
-        ) ? { date, image, text: label } : card
+        ) ? { date: new Date(date), image, text: label } : card
       ),
     );
     this.setState({ cards, editIndex: -1 });
@@ -80,9 +80,8 @@ class Workflow extends React.Component {
           <FAB.Action icon="class" />
           <FAB.Action icon="dashboard" />
         </FAB> */}
-        { cards.forEach(({ image, date, text }) => console.log(image, date, text)) }
 
-        { cards.map(({ image, date, text }, i) => console.log(text) || (
+        { cards.map(({ image, date, text }, i) => (
           <Card
             key={image + date + text}
             img={image}
